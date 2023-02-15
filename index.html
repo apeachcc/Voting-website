@@ -1,29 +1,35 @@
 <html>
 
 <head>
-    <title>Vote Your Favurite Candidate</title>
+    <title>Vote Your Favurite Breakfast</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
     <div id="vote-page">
+        <h1>Vote Your Favourite Breakfast:</h1>
         <div class="candidate">
             <h2>A</h2>
+            <img src="image/a.jpg" width="300px" height="300px">
             <p>Votes: <span>0</span></p>
             <button class="vote-button" data-candidate="A">Vote for A</button>
         </div>
         <div class="candidate">
             <h2>B</h2>
+            <img src="image/b.png" width="300px" height="300px">
             <p>Votes: <span>0</span></p>
             <button class="vote-button" data-candidate="B">Vote for B</button>
         </div>
         <div class="candidate">
             <h2>C</h2>
+            <img src="image/c.jpeg" width="300px" height="300px">
             <p>Votes: <span>0</span></p>
             <button class="vote-button" data-candidate="C">Vote for C</button>
         </div>
+        <div class="result-button">
         <button id="show-result-button" class="vote-button">Show Result</button>
+    </div>
     </div>
     <div id="result-page" class="hidden">
         <h2 id="winner"></h2>

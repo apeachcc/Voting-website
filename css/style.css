@@ -6,10 +6,16 @@ body {
     background: #fffdf0;
     font: 400 14px 'Calibri', 'Arial';
     padding: 20px;
+    text-align: center; 
+}
+
+.result-button {
+    padding: 20px;
+    margin: 20px;
 }
 
 .candidate {
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     padding: 20px;
     margin: 20px;
     text-align: center;
@@ -33,6 +39,7 @@ table {
     border-collapse: collapse;
     background: white;
     border-radius: 6px;
+    border-color: black;
     overflow: hidden;
     max-width: 800px;
     width: 100%;
@@ -53,13 +60,12 @@ thead tr {
 
 tbody tr {
     height: 48px;
-    border-bottom: 1px solid #d1d1d1;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 tbody tr:last-child {
     border:0;
 }
-
 
 
 
