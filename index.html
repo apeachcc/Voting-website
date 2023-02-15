@@ -1,27 +1,48 @@
 <html>
-    <head>
-        <title>Vote Your Favurite Candidate</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h1>Vote for your favorite candidate</h1>
-    <div class="candidate">
-      <h2>Candidate A</h2>
-      <button onclick="vote('A')">Vote</button>
-      <p class="vote-count">0</p>
-    </div>
-    <div class="candidate">
-      <h2>Candidate B</h2>
-      <button onclick="vote('B')">Vote</button>
-      <p class="vote-count">0</p>
-    </div>
-    <div class="candidate">
-      <h2>Candidate C</h2>
-      <button onclick="vote('C')">Vote</button>
-      <p class="vote-count">0</p>
-    </div>
-    <button onclick="window.location.href='results.html'">View Results</button>
 
+<head>
+    <title>Vote Your Favurite Candidate</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div id="vote-page">
+        <div class="candidate">
+            <h2>A</h2>
+            <p>Votes: <span>0</span></p>
+            <button class="vote-button" data-candidate="A">Vote for A</button>
+        </div>
+        <div class="candidate">
+            <h2>B</h2>
+            <p>Votes: <span>0</span></p>
+            <button class="vote-button" data-candidate="B">Vote for B</button>
+        </div>
+        <div class="candidate">
+            <h2>C</h2>
+            <p>Votes: <span>0</span></p>
+            <button class="vote-button" data-candidate="C">Vote for C</button>
+        </div>
+        <button id="show-result-button" class="vote-button">Show Result</button>
+    </div>
+    <div id="result-page" class="hidden">
+        <h2 id="winner"></h2>
+        <table id="vote-count-table" class="styled-table">
+            <thead>
+               <tr> 
+                    <th>Candidate</th>
+                    <th>Vote Count</th>
+                </tr> 
+            </thead>
+            
+            <tbody>
+                <tr>
+                  
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <script src="js/script.js"></script>
-    </body>
+</body>
+
 </html>

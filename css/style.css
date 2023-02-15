@@ -1,44 +1,103 @@
+.hidden {
+    display: none;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
+    background: #fffdf0;
+    font: 400 14px 'Calibri', 'Arial';
+    padding: 20px;
+}
+
+.candidate {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
     text-align: center;
-    margin: 1em 0;
-  }
-  
-  .candidate {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1em;
-    padding: 1em;
-    border: 2px solid black;
-    border-radius: 0.5em;
-  }
-  
-  h2 {
-    margin: 0;
-  }
-  
-  button {
-    margin: 1em 0;
-    padding: 0.5em 1em;
-    border: none;
+}
+
+/* .vote-button {
     background-color: #4CAF50;
     color: white;
-    border-radius: 0.5em;
-    font-size: 1em;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #3E8E41;
-  }
-  
-  p {
-    margin: 0;
-    font-size: 1.2em;
-  }
+  } */
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+td,
+th {
+    padding-left: 8px
+}
+
+thead tr {
+    height: 60px;
+    background: #FFED86;
+    font-size: 16px;
+}
+
+tbody tr {
+    height: 48px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+tbody tr:last-child {
+    border:0;
+}
+
+
+
+
+/* button CSS */
+.vote-button {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.vote-button:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.vote-button:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+@media (min-width: 768px) {
+    .vote-button {
+        padding: 13px 50px 13px;
+    }
+}
