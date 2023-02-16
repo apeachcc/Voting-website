@@ -31,7 +31,7 @@ function vote(candidateName) {
     const voteCountElement = candidateElement.querySelector('span');
     voteCountElement.textContent = voteCounts[candidateName];
   } else {
-    console.error(`Candidate '${candidateName}' not found.`);
+    console.error(`Option '${candidateName}' not found.`);
   }
 }
 
@@ -80,3 +80,7 @@ document.querySelector('#show-result-button').addEventListener('click', () => {
 });
 
 
+//giphy API
+
+var xhr = $.get("https://api.giphy.com/v1/gifs/search?api_key=dRZRgj3GmmezHm6nMTVC1ZaAgMCmOS8A&q=breakfast&limit=5&offset=0&rating=g&lang=en");
+xhr.done(function(data) { console.log("success got data", data); });
