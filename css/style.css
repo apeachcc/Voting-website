@@ -107,3 +107,36 @@ tbody tr:last-child {
         padding: 13px 50px 13px;
     }
 }
+
+/* giphy */
+#gif-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fffff2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+#new-gif {
+    padding: 0.75rem 2.5rem;
+    font-weight: 600;
+    background: #424242;
+    z-index: 10;
+    color: #fff;
+    border-radius: 30px;
+    border: 0;
+    font-size: 14px;
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    transition: background 0.15s ease;
+    cursor: pointer;
+}
+#new-gif:hover {
+    background: #626262;
+}
