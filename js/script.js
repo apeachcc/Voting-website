@@ -48,7 +48,7 @@ function showResult() {
       winner = candidateName;
       highestVoteCount = voteCounts[candidateName];
     }
-  }
+  }hk
   
   // Display the result page
   document.querySelector('#result-page').classList.remove('hidden');
@@ -63,7 +63,7 @@ function showResult() {
     const countCell = row.insertCell(1);
     nameCell.textContent = candidateName;
     countCell.textContent = voteCounts[candidateName];
-  }
+  };
 }
 
 // Event listener for the vote buttons
@@ -94,4 +94,30 @@ function getRandomGif() {
       gifImg.setAttribute('src', gifUrl);
     })
     .catch(error => console.error(error));
-}
+};
+
+//tomatoes api
+
+// const API_KEY_TOMATOES = '4q6a8bc7qpjaza8c97bksvun';
+// const searchResults = document.getElementById('search-movie-results');
+// const searchBreakfastButton = document.getElementById('search-breakfast');
+
+
+// searchBreakfastButton.addEventListener('submit', (event) => {
+//   event.preventDefault();
+//   const searchQuery = document.getElementById('search-query').value;
+//   const url = `https://cors-anywhere.herokuapp.com/https://www.rottentomatoes.com/api/private/v1.0/search?q=${encodeURIComponent(searchQuery)}&type=movie&limit=10&apikey=${API_KEY_TOMATOES}`;
+//   fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+//       let html = '<ul>';
+
+//       for (let result of data.movies) {
+//         html += `<li>${result.name} (${result.year}) - ${result.meterScore}%</li>`;
+//       }
+
+//       html += '</ul>';
+//       searchResults.innerHTML = html;
+//     })
+//     .catch(error => console.error(error));
+// });
