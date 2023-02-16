@@ -4,6 +4,8 @@ This is a simple web application that allows users to vote for their favorite me
 Easy to use interface with clear instructions
 
 Simple and fast voting system that stores data in local storage
+
+Create random GIF from Giphy
 ## Usage:
 To use the voting system, simply open the "index.html" file in your browser to access the voting page. From there, select your favorite option and click the "Vote" button. You can also click the "Show Results" button to view the voting results.
 

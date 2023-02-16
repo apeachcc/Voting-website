@@ -29,28 +29,36 @@
             <button class="vote-button" data-candidate="C">Vote for C</button>
         </div>
         <div class="result-button">
-        <button id="show-result-button" class="vote-button">Show Result</button>
-    </div>
+            <button id="show-result-button" class="vote-button">Show Result</button>
+        </div>
     </div>
     <div id="result-page" class="hidden">
         <h2 id="winner"></h2>
         <table id="vote-count-table" class="styled-table">
             <thead>
-               <tr> 
+                <tr>
                     <th>Breakfast Option</th>
                     <th>Vote Count</th>
-                </tr> 
+                </tr>
             </thead>
-            
+
             <tbody>
                 <tr>
-                  
+
                 </tr>
             </tbody>
         </table>
 
-        <div id="gif-wrap"></div>
-        <button id="new-gif">New Gif</button>
+        <section class="result-button">
+            <button onclick="getRandomGif()" class="vote-button">Click Me!</button>
+            <div class="gif-wrap">
+                <img id="gif" src="" alt="Random GIF">
+            </div>
+            
+        </section>
+        
+        
+
     </div>
     <script src="js/script.js"></script>
 </body>
