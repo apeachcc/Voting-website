@@ -163,3 +163,51 @@ function getRandomGif() {
     })
     .catch(error => console.error(error));
 }
+
+//NBA stat API
+const apiKey2 = 'c6e235eed226481c84a5151618898a4d';
+const endpointUrl = 'https://api.sportsdata.io/v3/nba/scores/json/TeamSeasonStats/2023';
+const requestUrl = `${endpointUrl}?key=${apiKey2}`;
+
+fetch(requestUrl)
+  .then(response => response.json())
+  .then(data => {
+    // Handle the data here
+    //console.log(data);
+    // Create a new table element
+    const table = document.createElement('table');
+    table.className = 'team-season-stats';
+    
+    // Create a new row element for the headers
+    const headerRow = document.createElement('tr');
+    // Add the header cells to the row
+    const headers = ['Team', 'Games', 'Points', 'Field Goal %', 'Three Pointers %', 'Free Throws %', 'Rebounds', 'Assists', 'Steals', 'Turnovers', 'Personal Fouls'];
+    headers.forEach(header => {
+      const headerCell = document.createElement('th');
+      headerCell.textContent = header;
+      headerRow.appendChild(headerCell);
+    });
+    // Add the header row to the table
+    table.appendChild(headerRow);
+    // Add a new row for each team's stats
+    data.forEach(team => {
+      const row = document.createElement('tr');
+      // Add a new cell for each stat
+      const stats = [team.Name, team.Games, team.Points, team.FieldGoalsPercentage, team.ThreePointersPercentage, team.FreeThrowsPercentage, team.Rebounds, team.Assists, team.Steals, team.Turnovers, team.PersonalFouls];
+      stats.forEach(stat => {
+        const cell = document.createElement('td');
+        cell.textContent = stat;
+        row.appendChild(cell);
+      });
+      // Add the row to the table
+      table.appendChild(row);
+    });
+    // Get the element where you want to display the table
+    const container = document.getElementById('stats-container');
+    // Add the table to the container element
+    container.appendChild(table);
+  })
+  .catch(error => {
+    // Handle any errors here
+    console.error(error);
+  });
