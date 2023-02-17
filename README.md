@@ -18,3 +18,6 @@ The application is built using HTML, CSS, Bootstrap, JavaScript and Jquery with 
 ![A user clicks on vote button to vote.](./image/Screenshot.png)
 ## Deployed URL:
 https://apeachcc.github.io/Voting-website/
+
+## Slide:
+https://docs.google.com/presentation/d/e/2PACX-1vRALQV97xDjOrAneurDK1Ke256MTH8PtDMswPIO0elQloxIh-FiRriX7BnOp0vrUlCbq_5C3hY1Phnz/pub?start=false&loop=false&delayms=3000&slide=id.p
