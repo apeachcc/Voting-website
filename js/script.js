@@ -4,9 +4,9 @@ if (localStorage.getItem('voteCounts')) {
   voteCounts = JSON.parse(localStorage.getItem('voteCounts'));
 } else {
   voteCounts = {
-    A: 0,
-    B: 0,
-    C: 0
+    Harry: 0,
+    Benny: 0,
+    Hugo: 0
   };
 }
 
@@ -67,7 +67,7 @@ function vote(candidateName) {
     
     // Show the "voted" helper text
     const voteButton = document.querySelector(`[data-candidate="${candidateName}"]`);
-    voteButton.insertAdjacentHTML('afterend', '<p class="voted-text">You voted for this candidate!</p>');
+    voteButton.insertAdjacentHTML('afterend', '<p class="voted-text">You voted for this mascot!</p>');
     
   } else {
     console.error(`Option '${candidateName}' not found.`);
@@ -101,9 +101,27 @@ function showResult() {
   document.querySelector('#vote-page').classList.add('hidden');
   document.querySelector('#winner').textContent = `The winner is ${winner} with ${highestVoteCount} votes!`;
   
-  // Update the vote count table on the result page
-  const table = document.querySelector('#vote-count-table');
-  for (const candidateName in voteCounts) {
+//   // Update the vote count table on the result page
+//   const table = document.querySelector('#vote-count-table');
+
+//   for (const candidateName in voteCounts) {
+//     const row = table.insertRow();
+//     const nameCell = row.insertCell(0);
+//     const countCell = row.insertCell(1);
+//     nameCell.textContent = candidateName;
+//     countCell.textContent = voteCounts[candidateName];
+//   }
+// }
+
+// Update the vote count table on the result page
+const table = document.querySelector('#vote-count-table tbody');
+
+// Clear any existing rows in the table body
+table.innerHTML = '';
+
+// Populate the table with the updated vote counts
+for (const candidateName in voteCounts) {
+  if (voteCounts[candidateName] !== '') {
     const row = table.insertRow();
     const nameCell = row.insertCell(0);
     const countCell = row.insertCell(1);
@@ -111,6 +129,10 @@ function showResult() {
     countCell.textContent = voteCounts[candidateName];
   }
 }
+}
+
+
+
 
 // Event listener for the vote buttons
 document.querySelectorAll('.vote-button').forEach((element) => {
