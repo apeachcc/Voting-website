@@ -2,12 +2,42 @@
     display: none;
 }
 
+
 body {
-    background: #fffdf0;
-    font: 400 14px 'Calibri', 'Arial';
-    padding: 20px;
+    background: #FBFBFB;
+    /* padding: 20px; */
     text-align: center; 
 }
+
+body {
+    font-family: 'russo one', 'Neucha', 'Helvetica', 'Arial', 'sans-serif';
+  }
+
+  h1,
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'russo one', 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Hero section ============= */
+
+header.jumbotron {
+    background: #EAE4D7;
+  }
+
+/* button style ============= */
 
 .result-button {
     padding: 20px;
@@ -20,6 +50,13 @@ body {
     margin: 20px;
     text-align: center;
 }
+
+.helper-text {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+  }
+  
 
 /* .vote-button {
     background-color: #4CAF50;
@@ -69,7 +106,7 @@ tbody tr:last-child {
 
 
 
-/* button CSS */
+/* vote button CSS */
 .vote-button {
     font-size: 16px;
     font-weight: 200;
@@ -110,14 +147,6 @@ tbody tr:last-child {
 
 /* giphy */
 .gif-wrap {
-    border: 1px solid rgb(0, 0, 0);
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-}
-
-/* tomatoes */
-.search-result {
     border: 1px solid rgb(0, 0, 0);
     padding: 20px;
     margin: 20px;
